@@ -10,7 +10,7 @@ the module will convert it to {"my_val":"Hello_world"}
 and viceversa
 
 """
-from humps import camelize
+from humps.camel import case
 from pydantic import BaseModel
 
 __author__ = "Ahmed Nafies <ahmed.nafies@gmail.com>"
@@ -21,5 +21,5 @@ __version__ = "1.0.5"
 
 class CamelModel(BaseModel):
     class Config:
-        alias_generator = camelize
+        alias_generator = case
         populate_by_name = True
